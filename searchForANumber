@@ -1,0 +1,24 @@
+function searchForANumber(numbers,arrayOfInteger){
+
+    let deletingNum = arrayOfInteger[1];
+    let searchNum = arrayOfInteger[2]
+    let newArray = numbers.slice(0,arrayOfInteger[0])
+
+
+    for(let i = 0; i < deletingNum ; i++){
+    newArray.shift()
+    }
+    
+    let count = 0;
+    newArray.forEach(element =>{
+        if(element === searchNum){
+            count += 1;
+        }
+    })
+
+    
+    console.log(`Number ${searchNum} occurs ${count} times.`)
+
+}
+searchForANumber([5, 2, 3, 4, 1, 6],[5, 2, 3])
+searchForANumber([7, 1, 5, 8, 2, 7],[3, 1, 5])
