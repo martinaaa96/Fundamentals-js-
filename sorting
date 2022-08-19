@@ -1,0 +1,25 @@
+function sorting(array) {
+    let newArray = array.slice();
+    let resultArray = []; 
+    let inputL = array.length
+
+    let max = array.sort((a, b) => b - a);
+    let min = newArray.sort((a, b) => a - b);
+
+    for (let i = 0; i < inputL / 2; i++) {
+       
+       let maxNum = max[i]
+       let minNum = min[i]
+       resultArray.push(maxNum, minNum)
+        
+     
+    }
+    if(array.length % 2 !== 0){
+        resultArray.pop()
+    }
+console.log(resultArray.join(" "))
+
+}
+
+
+sorting([1, 21, 3, 52, 69, 63, 31, 2, 18, 94])
