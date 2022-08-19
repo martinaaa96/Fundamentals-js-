@@ -1,0 +1,13 @@
+function smallestTwoNumbers(array) {
+
+    let smallNum = array.sort((a, b) => a - b)
+    let newArray = []
+
+    for (let i = 0; i < 2; i++) {
+        newArray.push(smallNum[i])
+       
+    }
+    console.log(newArray.join(" "))
+
+}
+smallestTwoNumbers([30, 15, 50, 5])
